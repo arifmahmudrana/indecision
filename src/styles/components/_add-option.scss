@@ -1,0 +1,43 @@
+.add-option {
+  padding: $m-size;
+  @include mobile {
+    padding: $s-size;
+  }
+  
+  &__form {
+    display: flex;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  &__input {
+    &, &:focus {
+      @extend %border;
+      outline: none;
+    }
+    background: $dark-blue;
+    color: $off-blue;
+    flex-grow: 1;
+    font-size: $m-size;
+    margin-right: $m-size;
+    padding: $s-size;
+    @include mobile {
+      @include margBot($s-size);
+      font-size: $m-size;
+      padding: $xs-size;
+    }
+  }
+  &-error {
+    @include margBot($s-size);
+    color: #ff9090;
+    font-size: $l-size;
+    font-style: italic;
+    font-weight: 300;
+    opacity: .8;
+    text-align: center;
+    @include mobile {
+      @include margBot($xs-size);
+      font-size: $xm-size;
+    }
+  }  
+}

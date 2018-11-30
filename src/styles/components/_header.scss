@@ -1,0 +1,22 @@
+.header {
+  background: $off-black;
+  color: white;
+  @include margBot($xl-size);
+  padding: $m-size 0;
+  @include mobile {
+    @include margBot($m-size);
+  }
+
+  &__title {
+    @include margBot($s-size);
+    font-size: $l-size;
+    font-weight: 300;
+  }
+
+  &__subtitle {
+    @include margBot(0);
+    color: $off-blue;
+    font-size: $m-size;
+    font-weight: 500;
+  }
+}

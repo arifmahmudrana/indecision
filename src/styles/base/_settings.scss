@@ -1,0 +1,34 @@
+// Colors
+$off-black: #20222b;
+$off-blue: #a5afd7;
+$off-blue-dark: #464b5e;
+$blue: #3c4251;
+$dark-blue: #333745;
+$purple: #8357c5;
+
+// Spacing
+$b-size: 1.6;
+$xs-size: calc(#{$b-size} * .5rem);
+$s-size: calc(#{$b-size} * .75rem);
+$m-size: calc(#{$b-size} * 1rem);
+$xm-size: calc(#{$b-size} * 1.5rem);
+$l-size: calc(#{$b-size} * 2rem);
+$xl-size: calc(#{$b-size} * 3rem);
+
+// Place holder rules
+%border {
+  border: none;
+  border-bottom: .3rem solid darken($purple, 10%);
+}
+
+// Mixins
+@mixin margBot($size) {
+  margin: 0;
+  margin-bottom: $size;
+}
+
+@mixin mobile {
+  @media (max-width: 45rem) {
+    @content;
+  }
+}

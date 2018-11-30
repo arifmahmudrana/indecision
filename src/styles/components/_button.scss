@@ -1,0 +1,44 @@
+.button {
+  @extend %border;
+  background: $purple;
+  color: white;
+  font-weight: 500;
+  padding: $s-size;
+
+  @include mobile {
+    font-size: $m-size;
+    padding: $xs-size;
+  }
+
+  &--link {
+    background: none;
+    border: none;
+    color: $off-blue;
+    padding: 0;
+
+    @include mobile {
+      font-size: $m-size;
+    }
+  }
+}
+
+.big-button {
+  @extend .button;
+  border-bottom-width: .6rem;
+  font-weight: bold;
+  font-size: $l-size;
+  margin-bottom: $xl-size;
+  padding: calc(#{$b-size} * 1.5rem);
+  width: 100%;
+
+  &:disabled {
+    opacity: .5;
+  }
+
+  @include mobile {
+    @include margBot($s-size);
+    border-bottom-width: .3rem;
+    font-size: $xm-size;
+    padding: $xs-size;
+  }
+}

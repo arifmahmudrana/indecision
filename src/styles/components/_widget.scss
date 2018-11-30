@@ -1,0 +1,38 @@
+.widget {
+  background: $off-blue-dark;
+  margin-bottom: $xl-size;
+  @include mobile {
+    margin-bottom: $s-size;
+  }
+
+  &__message {
+    @include margBot(0);
+    border-bottom: 1px solid lighten($off-blue-dark, 10%);
+    color: $off-blue;
+    padding: $l-size;
+    text-align: center;  
+    @include mobile {
+      padding: $s-size;
+    }  
+  }
+
+  &-header {
+    align-items: center;
+    background: $blue;
+    color: $off-blue;
+    display: flex;
+    justify-content: space-between;
+    padding: $m-size;
+
+    @include mobile {
+      padding: $s-size;
+    }
+  
+    &__title {
+      @include margBot(0);
+      @include mobile {
+        font-size: $m-size;
+      }
+    }
+  }
+}
